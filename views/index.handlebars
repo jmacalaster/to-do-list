@@ -1,0 +1,42 @@
+<h1>Tasks for the Day:</h1>
+
+<h2>Write down all the tasks you need to get done. When you complete them, mark them as done.</h2>
+
+<br>
+
+<h2>Tasks that need to be completed:</h2>
+
+<ul>
+  {{#each task}}
+    {{#unless completed}}
+      {{> task/task-block completed=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Tasks that are done!</h2>
+
+<ul>
+  {{#each task}}
+    {{#if completed}}
+      {{> task/task-block completed=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Task:</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">To-Do:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="completed">Completed?</label><br>
+    <input type="radio" name="completed" value="1" checked> Completed <br>
+    <input type="radio" name="completed" value="0"> Not Completed
+  </div>
+
+  <button type="submit">Add To-Do</button>
+</form>
