@@ -7,9 +7,9 @@
 <h2>Tasks that need to be completed:</h2>
 
 <ul>
-  {{#each task}}
+  {{#each todo}}
     {{#unless completed}}
-      {{> task/task-block completed=true}}
+      {{> todo/to-do-block completed=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -17,9 +17,9 @@
 <h2>Tasks that are done!</h2>
 
 <ul>
-  {{#each task}}
+  {{#each todo}}
     {{#if completed}}
-      {{> task/task-block completed=false}}
+      {{> todo/to-do-block completed=false}}
     {{/if}}
   {{/each}}
 </ul>
@@ -34,8 +34,8 @@
 
   <div class="form-group">
     <label for="completed">Completed?</label><br>
-    <input type="radio" name="completed" value="1" checked> Completed <br>
-    <input type="radio" name="completed" value="0"> Not Completed
+    <input type="radio" name="completed" value="0" checked> Not Completed <br>
+    <input type="radio" name="completed" value="1"> Completed
   </div>
 
   <button type="submit">Add To-Do</button>
