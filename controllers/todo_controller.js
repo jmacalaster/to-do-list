@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
     var hbsObject = {
       todo: data
     };
-    console.log(hbsObject);
+    console.log("hbsObject: " + hbsObject);
     res.render("index", hbsObject);
   });
 });
@@ -35,12 +35,7 @@ router.put("/api/todos/:id", function(req, res) {
   todos.update({
     completed: req.body.completed
   }, condition, function(result) {
-    if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
-      return res.status(404).end();
-    } else {
       res.status(200).end();
-    }
   });
 });
 

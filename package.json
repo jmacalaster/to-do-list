@@ -1,0 +1,26 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "This application was built using handlebars and express with a custom built ORM",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmacalaster/to-do-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmacalaster/to-do-list/issues"
+  },
+  "homepage": "https://github.com/jmacalaster/to-do-list#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
